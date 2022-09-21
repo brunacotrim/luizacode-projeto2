@@ -11,6 +11,12 @@ A API permite a criação e exclusão dos registros abaixo, além de várias op�
 * Endereços
 * Carrinho
 
+## Configurações
+Os parâmetros abaixo devem ser configurados em arquivo .env na raiz do projeto.
+| Nome do parâmetro | Descrição |
+|------------|------------|
+|DATABASE_URI|String de conexão do Atlas (MongoDB)|
+
 ## Dependências
 * PyMongo - Bilbioteca Python utilizada para trabalho com o MongoDB no Python.
 * Motor - Driver oficial do MongoDB para trabalhar de forma assíncrona.
