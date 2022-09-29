@@ -1,0 +1,159 @@
+#######################################
+############  usuário  ################
+#######################################
+
+# Criar usuário 1
+POST http://127.0.0.1:8000/user HTTP/1.1
+content-type: application/json
+
+{
+    "name": "teste",
+    "email": "umteste@gmail.com",
+    "password": "1234"
+}
+
+#######################################
+# Criar usuário 2
+POST http://127.0.0.1:8000/user HTTP/1.1
+content-type: application/json
+
+{
+    "name": "segundo teste",
+    "email": "segundo@gmail.com",
+    "password": "987"
+}
+
+
+#######################################
+# Consultar usuário por id
+GET http://127.0.0.1:8000/user?id=633514ea960ccba1c6aa9718 HTTP/1.1
+content-type: application/json
+
+
+#######################################
+# Consultar usuário pelo primeiro nome
+GET http://127.0.0.1:8000/user/name?name=segundo HTTP/1.1
+content-type: application/json
+
+
+#######################################
+# Consultar lista de e-mails de um domínio
+GET http://127.0.0.1:8000/user/list_emails?domain=hotmail HTTP/1.1
+content-type: application/json
+
+
+#######################################
+# Deletar usuário
+DELETE  http://127.0.0.1:8000/user?email=segundo@gmail.com HTTP/1.1
+content-type: application/json
+
+
+#######################################
+############  endereço  ###############
+#######################################
+
+# Criar endereço 1
+POST http://127.0.0.1:8000/user/bruna_viotto@hotmail.com/address HTTP/1.1
+content-type: application/json
+
+{
+    "street": "Rua Ladrilhada",
+    "cep": "99999-999",
+    "city": "São Paulo",
+    "state": "SP"
+}
+
+
+#######################################
+# Criar endereço
+POST http://127.0.0.1:8000/user/bruna_viotto@hotmail.com/address HTTP/1.1
+content-type: application/json
+
+{
+    "street": "Rua Ali Baba",
+    "cep": "13730-000",
+    "city": "Uberaba",
+    "state": "MG"
+}
+
+
+#######################################
+# Buscar endereços do cliente
+GET http://127.0.0.1:8000/user/bruna_viotto@hotmail.com/address HTTP/1.1
+content-type: application/json
+
+
+
+#######################################
+############  produto  ################
+#######################################
+
+# Criar produto 1
+POST http://127.0.0.1:8000/product HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Picolé",
+    "description": "Doce gelado",
+    "price": "9.99",
+    "image": "https://docesonho.com.br/prod123.jpg",
+    "code": 111
+}
+
+
+#######################################
+# Criar produto 2
+POST http://127.0.0.1:8000/product HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Algodão doce",
+    "description": "Doce de açucar",
+    "price": 2.46,
+    "image": "https://docesonho.com.br/prod123.jpg",
+    "code": 222
+}
+
+
+#######################################
+# Criar produto 3
+POST http://127.0.0.1:8000/product HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Pipoca da vovózinha",
+    "description": "Doce de milho",
+    "price": 5.00,
+    "image": "https://docesonho.com.br/prod123.jpg",
+    "code": 333
+}
+
+
+#######################################
+# Consultar produto por id
+GET http://127.0.0.1:8000/product/?id=63354e8759122201d84a28ea HTTP/1.1
+content-type: application/js
+
+
+#######################################
+# Consultar produto por código
+GET http://127.0.0.1:8000/product/code?code=123 HTTP/1.1
+content-type: application/json
+
+
+#######################################
+# Consultar produto por nome
+GET http://127.0.0.1:8000/product/name?name=pipoca HTTP/1.1
+content-type: application/json
+
+
+#######################################
+# Consultar lista de produtos
+GET http://127.0.0.1:8000/product/all HTTP/1.1
+content-type: application/json
+
+
+#######################################
+# Deletar produto
+DELETE http://127.0.0.1:8000/product/?code=222 HTTP/1.1
+content-type: application/json
