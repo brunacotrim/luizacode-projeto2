@@ -9,7 +9,7 @@ A API permite a criação e exclusão dos registros abaixo, além de várias op�
 * Produtos
 * Usuários
 * Endereços
-* Carrinho
+* Carrinho (Em construção)
 
 ## Configurações
 Os parâmetros abaixo devem ser configurados em arquivo .env na raiz do projeto.
@@ -23,6 +23,7 @@ Os parâmetros abaixo devem ser configurados em arquivo .env na raiz do projeto.
 * FastAPI - Framework Python utilizado no desenvolvimento de API's.
 * Pydantic - Biblioteca que implementa a validação de dados para Python.
 * Uvicorn - Framework que dá a base dos componentes assíncronos do FastAPI.
+* Dotenv - Para trabalhar com arquivo de configuração .env
 
 ## Documentação
 A documentação da API está em construção.</br>
@@ -36,7 +37,6 @@ http://localhost:8000/docs
     $ python -m venv venv
     ```
 * Ativar ambiente
-
     ```
     $ .\venv\Scripts\Activate.ps1
     ```
@@ -46,5 +46,5 @@ http://localhost:8000/docs
      ```
 * Iniciar o servidor
     ```
-    uvicorn main:app --reload
+    uvicorn shopping_cart.app:app --reload
     ```
